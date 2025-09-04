@@ -10,28 +10,26 @@
     </head>
     <body>
         <h1> guess any one for toss </h1>
-        <button id="head" onclick="let l=Math.random()*2;
-            l=Math.ceil(l);
-                if(l==1){
-                    document.getElementById('result').innerText='you select head and you win';
-                }
-                else{
-                    document.getElementById('result').innerText='you select tall and you lose';
-                }
+        <button id="head" onclick="toss('head')";
             
-            "> head </button>
-        <button id="tall" onclick="let l=Math.random()*2;
-            l=Math.ceil(l);
-                if(l==1){
-                    document.getElementById('result').innerText='you select head and you loss';
-                }
-                else{
-                    document.getElementById('result').innerText='you select tall and you win';
-                }">tall</button>
+            > head </button>
+        <button id="tall" onclick="toss('tall')">tall</button>
         <h1 id="result"> hi</h1>
         
         <script >
-            
+            function toss(a) {
+                let l=Math.random()*2;
+            l=Math.ceil(l);
+                if(l==1){
+                    document.getElementById('result').innerText=`you select ${a} and you win`;
+                }
+                else{
+                    document.getElementById('result').innerText=`you select ${a} and you lose`;
+                }
+
+
+
+            }
             
             document.getElementById('result').innerText="you result is "+l;
         </script>
