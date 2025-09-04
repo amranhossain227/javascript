@@ -1,0 +1,12 @@
+#add_bag{
+    border:none;
+    background-color: lightgreen;
+    border-radius: 10px;
+    padding:5px 20px;
+}
+#add_sale{
+    border:none;
+    background-color: lightgreen;
+    border-radius: 10px;
+    padding:5px 30px;
+}

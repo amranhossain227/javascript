@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="myntrabag.css">
+    </head>
+    <body>
+        <button id="add_bag" onclick=" bag_item+=1; document.getElementById('bag_item').innerText= `Add to Bag 
+            ${bag_item}` ">Add to Bag</button>
+        <button id="moveto_wishlist" onclick=" bag_item-=1; document.getElementById('bag_item').innerText= `Add to Bag 
+            ${bag_item}` ">Move to Wishlist</button>
+        <button id="add_sale" onclick=" bag_item+=1; document.getElementById('bag_item').innerText= `Add to Bag 
+            ${bag_item}` ";>Add 1+1 Sale Item</button>
+        <button id="remove_item" onclick=" bag_item=0; document.getElementById('bag_item').innerText= `Add to Bag 
+            ${bag_item}` ">Remove Item</button>
+        <h1 id="bag_item"></h1>
+        
+        
+        <script>   
+            let bag_item = 9;
+            document.getElementById('bag_item').innerText = `Add to Bag 
+            ${bag_item}`;
+        </script>
+
+        
+    </body>
+</html>

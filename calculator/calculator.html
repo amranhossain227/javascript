@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> this is the calculator </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="calculator.css">
+    </head>
+    <body> 
+        <div id="calculator">
+            <input type="text" id="display" >
+            <div class="button-container">
+                <button class="calculator-button" onclick="current_display=''; document.getElementById('display').value=current_display;">C</button>
+                <button class="calculator-button" onclick="current_display=current_display+'1'; document.getElementById('display').value=current_display;">1</button>
+                <button class="calculator-button" onclick="current_display=current_display+'2'; document.getElementById('display').value=current_display;">2</button>
+                <button class="calculator-button" onclick="current_display=current_display+'+'; document.getElementById('display').value=current_display;">+</button>
+                <button class="calculator-button" onclick="current_display=current_display+'3'; document.getElementById('display').value=current_display;">3</button>
+                <button class="calculator-button" onclick="current_display=current_display+'4'; document.getElementById('display').value=current_display;">4</button>
+                <button class="calculator-button" onclick="current_display=current_display+'-'; document.getElementById('display').value=current_display;">-</button>
+                <button class="calculator-button" onclick="current_display=current_display+'5'; document.getElementById('display').value=current_display;">5</button>
+                <button class="calculator-button" onclick="current_display=current_display+'6'; document.getElementById('display').value=current_display;">6</button>
+                <button class="calculator-button" onclick="current_display=current_display+'*'; document.getElementById('display').value=current_display;">*</button>
+                <button class="calculator-button" onclick="current_display=current_display+'7'; document.getElementById('display').value=current_display;">7</button>
+                <button class="calculator-button" onclick="current_display=current_display+'8'; document.getElementById('display').value=current_display;">8</button>
+                <button class="calculator-button" onclick="current_display=current_display+'/'; document.getElementById('display').value=current_display;">/</button>
+                <button class="calculator-button" onclick=" 
+                current_display=eval(current_display); 
+                document.getElementById('display').value=current_display;">=</button>
+                <button class="calculator-button" onclick="current_display=current_display.slice(0,-1); document.getElementById('display').value=current_display;">DEL</button>
+                <button class="calculator-button" onclick="current_display=current_display+'.'; document.getElementById('display').value=current_display;">.</button>
+                <button class="calculator-button" onclick="current_display=current_display+'9'; document.getElementById('display').value=current_display;">9</button>
+                <button class="calculator-button" onclick="current_display=current_display+'0'; document.getElementById('display').value=current_display;">0</button>
+
+    
+        </div>
+       
+        
+        <script> 
+            let current_display='';
+            
+
+
+        </script>
+    </body>
+</html>
