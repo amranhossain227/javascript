@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1> guess any one for toss </h1>
+        <button id="head" onclick="let l=Math.random()*2;
+            l=Math.ceil(l);
+                if(l==1){
+                    document.getElementById('result').innerText='you select head and you win';
+                }
+                else{
+                    document.getElementById('result').innerText='you select tall and you lose';
+                }
+            
+            "> head </button>
+        <button id="tall" onclick="let l=Math.random()*2;
+            l=Math.ceil(l);
+                if(l==1){
+                    document.getElementById('result').innerText='you select head and you loss';
+                }
+                else{
+                    document.getElementById('result').innerText='you select tall and you win';
+                }">tall</button>
+        <h1 id="result"> hi</h1>
+        
+        <script >
+            
+            
+            document.getElementById('result').innerText="you result is "+l;
+        </script>
+    </body>
+</html>
