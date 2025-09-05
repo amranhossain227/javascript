@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+       <div>
+
+        <select id="option_cel">
+            <option value="celsius"> celsius </option>
+            <option value="fahrenheit" > fahrenheit </option>
+        </select>
+        <input type="text" id="given_value" placeholder="enter the value">=
+        <input type="text" id="result" placeholder="your result">
+        <button id="convert" onclick="convert()"> convert </button>
+       </div>
+
+        
+        <script>
+            function convert() {
+                let given_type=document.getElementById('option_cel').value;
+                let given_value = document.getElementById('given_value').value;
+                
+                if(given_type==='celsius') {
+                    let fahrenheit = (given_value * 9/5) + 32;
+                    document.getElementById('result').value = fahrenheit;
+                } else if(given_type==='fahrenheit') {
+                    let celsius = (given_value - 32) * 5/9;
+                    document.getElementById('result').value = celsius;
+                } else {
+                    alert('Please enter a value in either Celsius or Fahrenheit field.');
+                }
+            }
+
+
+
+
+        </script>
+
+    </body>
+</html>
