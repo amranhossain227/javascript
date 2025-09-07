@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+
+        <style>
+            .odd{
+                background-color: lightgray;
+
+                
+            }
+            .even{
+                background-color: blue;
+            }
+        </style>
+    </head>
+
+
+    <body>
+
+        <button class="btn" onclick="btnclick();">0</button>        
+        
+        <script >
+            let count = parseInt(localStorage.getItem('count')) || 0;
+            let btn=document.querySelector('.btn');
+            btn.innerText=count;
+
+            function btnclick() {
+                
+                
+                count++;
+                localStorage.setItem('count',count);
+
+                if (count%2 === 0) {
+                    btn.classList.remove('odd');
+                    btn.classList.add('even');
+                    
+                } else {
+                    btn.classList.remove('even');
+                    btn.classList.add('odd');
+                }
+                count=localStorage.getItem('count');
+                btn.innerText=count;
+            }
+
+            let obj={
+                name:"amran",
+                age:24,
+                city:"dhaka",
+            };
+            let myjson=JSON.stringify(obj);
+            //console.log(myjson);
+            // convert json to object
+            let myobj=JSON.parse(myjson);
+
+            localStorage.setItem('myjson',myjson);
+            let data=localStorage.getItem('myjson');
+            console.log(data);
+            let date=new Date();
+            let hours=date.getHours();
+            console.log(hours);
+
+        </script>
+    </body>
+</html>
